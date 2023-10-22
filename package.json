@@ -1,0 +1,23 @@
+{
+  "name": "b64sc",
+  "version": "1.0.0",
+  "description": "Converter base64 strings to high quality images for further image download/copying",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hschhhwwwo0o/b64sc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hschhhwwwo0o/b64sc/issues"
+  },
+  "homepage": "https://github.com/hschhhwwwo0o/b64sc#readme",
+  "devDependencies": {
+    "husky": "^8.0.0"
+  }
+}
