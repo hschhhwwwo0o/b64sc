@@ -1,7 +1,9 @@
+@import "vars";
+
 * {
   font-family: 'Playfair Display', serif !important;
 }
 
 body {
-  background-color: #F8F8F8;
+  background-color: $white;
 }
