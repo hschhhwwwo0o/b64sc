@@ -2,4 +2,14 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
   css: ["~/assets/styles/reset.scss"],
+  modules: [
+    [
+      "@nuxtjs/google-fonts",
+      {
+        families: {
+          "Playfair+Display": true,
+        },
+      },
+    ],
+  ],
 });
