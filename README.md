@@ -70,3 +70,77 @@ To install the repository, paste this command into your terminal:
 ```sh
 git clone https://github.com/hschhhwwwo0o/b64sc.git
 ```
+
+## Dictionary of Terms.
+
+> _«A dictionary of terms defines all the specialized terms that the reader needs to know in order to properly understand the software requirements specification»_.
+>
+> <ins>«Development of software requirements», Third Edition. Carl Vigers, Jay Beatty</ins>
+
+The term dictionary is intended to ensure that the same terms are used throughout the code base. For example, to eliminate the use of synonym words.
+
+| Term            | Meaning                                                                                                           |
+| :-------------- | :---------------------------------------------------------------------------------------------------------------- |
+| base64          | A standard for encoding binary data using only 64 ASCII characters.                                               |
+| Image previewer | This window will display the image after inserting the base64 string into the corresponding field.                |
+| HIG             | A set of guidelines for designers.                                                                                |
+| WCAG            | A set of guidelines on how to create an interface and how to check its accessibility for users with disabilities. |
+| Open Graph      | Micro markup for SEO.                                                                                             |
+| Lighthouse      | Automated tool for measuring the quality of web pages.                                                            |
+
+<br />
+<br />
+<br />
+<br />
+
+## Software requirements.
+
+> _«Requirements are a specification of what needs to be implemented. They describe the behavior of the system, the properties of the system or its attributes. They can serve as constraints in the system development process.»_
+>
+> <ins>Ian Sommerville, Pete Sawyer, 1997</ins>
+
+### Quality Attributes.
+
+> _«Quality attributes describe the characteristics observed during software execution. They strongly influence the perception of the system by users and the opinion that users have about its quality.»_
+>
+> <ins>«Development of software requirements», Third Edition. Carl Vigers, Jay Beatty</ins>
+
+| Attribute                          | ID                       | Description / Why it's necessary                                                 | Done |
+| :--------------------------------- | :----------------------- | :------------------------------------------------------------------------------- | :--: |
+| UI is based on HIG.                | QA/UI/HIG                | HIG is essential for a better UX.                                                |  ❌  |
+| Interface adaptation.              | QA/UX/ADAPTIVE-INTERFACE | An adapative interface is needed to better display the app on different devices. |  ❌  |
+| WCAG compliance.                   | QA/UX/WCAG               | WCAG is needed for a better UX for people with disabilities.                     |  ❌  |
+| Error output.                      | QA/UX/ERRORS-LOG         | Necessary for a better UX.                                                       |  ❌  |
+| High Lighthouse testing results.   | QA/SEO/LIGHTHOUSE        | Necessary to improve search engine rankings.                                     |  ❌  |
+| Open Graph support.                | QA/SEO/OPEN-GRAPH        | Necessary to improve search engine rankings.                                     |  ❌  |
+| Description of standard meta tags. | QA/SEO/META              | Necessary to improve search engine rankings.                                     |  ❌  |
+| Twitter meta tags.                 | QA/SEO/TWITTER-META      | Necessary to improve search engine rankings.                                     |  ❌  |
+
+### Functional requirements.
+
+> _«Functional requirements can be written in terms of what the system does or what the user does.»_
+>
+> <ins>«Development of software requirements», Third Edition. Carl Vigers, Jay Beatty</ins>
+
+| Functional requirement                | ID                      | Responsible element | Done |
+| :------------------------------------ | :---------------------- | :------------------ | :--: |
+| Sending feedback.                     | UF/FEEDBACK/CREATE      | ?                   |  ❌  |
+| Generating daturl from base64 string. | UF/FINAL-IMAGE/DATA-URL | ?                   |  ❌  |
+| Displaying an image.                  | UF/FINAL-IMAGE/PREVIEW  | ?                   |  ❌  |
+| Downloading a image.                  | UF/FINAL-IMAGE/DOWNLOAD | ?                   |  ❌  |
+| Copying an image to the clipboard.    | UF/FINAL-IMAGE/COPY     | ?                   |  ❌  |
+
+## Literature.
+
+The development process was strongly influenced by the books:
+
+- «Development of software requirements» Carl Vigers, Jay Beatty;
+- «Clean Architecture» Robert Martin;
+- «Envisioning Information» Edward R. Tufte;
+- «A Description of the Model-View-Controller User Interface Paradigm in the Smalltalk-80 System» Glenn E. Krasner and Stephen T. Pope;
+- «From monoliths to microservices» Sam Newman
+
+## Useful links.
+
+- <a href="https://nextjs.org/docs/app/building-your-application/deploying/static-exports">Static export deployment on Vercel.</a>
+- <a href="https://nextjs.org/docs/pages/building-your-application/deploying#nextjs-build-api">Build app on Vercel.</a>
