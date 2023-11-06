@@ -122,13 +122,13 @@ The term dictionary is intended to ensure that the same terms are used throughou
 >
 > <ins>«Development of software requirements», Third Edition. Carl Vigers, Jay Beatty</ins>
 
-| Functional requirement                | ID                      | Responsible element | Done |
-| :------------------------------------ | :---------------------- | :------------------ | :--: |
-| Sending feedback.                     | UF/FEEDBACK/CREATE      | ?                   |  ❌  |
-| Generating daturl from base64 string. | UF/FINAL-IMAGE/DATA-URL | ?                   |  ❌  |
-| Displaying an image.                  | UF/FINAL-IMAGE/PREVIEW  | ?                   |  ❌  |
-| Downloading a image.                  | UF/FINAL-IMAGE/DOWNLOAD | ?                   |  ❌  |
-| Copying an image to the clipboard.    | UF/FINAL-IMAGE/COPY     | ?                   |  ❌  |
+| Functional requirement                | ID                      | Responsible element          | Done |
+| :------------------------------------ | :---------------------- | :--------------------------- | :--: |
+| Sending feedback.                     | UF/FEEDBACK/CREATE      | @feedback-service            |  ❌  |
+| Generating daturl from base64 string. | UF/FINAL-IMAGE/DATA-URL | @base64-to-dataurl-generator |  ❌  |
+| Displaying an image.                  | UF/FINAL-IMAGE/PREVIEW  | @app                         |  ❌  |
+| Downloading a image.                  | UF/FINAL-IMAGE/DOWNLOAD | @html-image-controller       |  ❌  |
+| Copying an image to the clipboard.    | UF/FINAL-IMAGE/COPY     | @html-image-controller       |  ❌  |
 
 ## Literature.
 
