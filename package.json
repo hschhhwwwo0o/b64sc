@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "prepare": "husky install",
-    "dev": "cd ./app/nuxt-b64sc && npm run dev"
+    "dev": "cd ./app/nuxt-b64sc && npm run dev",
+    "build-modules": "bash ./cli/scripts/build_modules.bash"
   },
   "repository": {
     "type": "git",

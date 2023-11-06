@@ -45,6 +45,24 @@ The application implements a «modular monolith» architecture. The project is s
 
 The purpose of this separation is to separate business logic from fickle and windy frameworks and libraries that have nothing to do with business logic. The modules are designed in such a way that they can be used independently of the framework; this makes it very easy to migrate from ReactJS to VueJS, for example.
 
+If you're using macOS or Linux (Doesn't work on Windows¹), you can use the tool to quickly create and configure a new module; run this command in the root of the project:
+
+```sh
+bash cli/module_creator.bash
+```
+
+To change the logic of module operation and check the result of its work in the application, you need to recompile the module. This can be done using the build_modules script; execute this command in the root of the project:
+
+```sh
+npm run build-modules
+```
+
+If something went wrong, you can compile the modules yourself. To compile a module yourself, go to the module folder and execute the compile command:
+
+```sh
+npm run compile
+```
+
 ### 4. Application development.
 
 > _«When building interactive applications, as with other programs, modularity of components has enormous benefits. Isolating functional units from each other as much as possible makes it easier for the application designer to understand and modify each particular unit, without having to know everything about the other units._
