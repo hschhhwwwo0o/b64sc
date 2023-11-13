@@ -4,7 +4,6 @@
   "description": "Converter base64 strings to high quality images for further image download/copying",
   "main": "index.js",
   "scripts": {
-    "prepare": "husky install",
     "dev": "cd ./app/nuxt-b64sc && npm run dev",
     "build-modules": "bash ./cli/scripts/build_modules.bash"
   },
