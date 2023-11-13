@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "cd ./app/nuxt-b64sc && npm run dev",
-    "build-modules": "bash ./cli/scripts/build_modules.bash"
+    "build-modules": "bash ./cli/scripts/build_modules.bash",
+    "lint": "bash ./cli/scripts/lint.bash",
+    "prepare": "husky install",
+    "build": "bash ./cli/scripts/build_app.bash",
+    "start": "cd ./app/yamu-react-app && npm run start"
   },
   "repository": {
     "type": "git",
@@ -19,6 +23,6 @@
   },
   "homepage": "https://github.com/hschhhwwwo0o/b64sc#readme",
   "devDependencies": {
-    "husky": "^8.0.0"
+    "husky": "^8.0.3"
   }
 }

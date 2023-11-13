@@ -89,6 +89,25 @@ To install the repository, paste this command into your terminal:
 git clone https://github.com/hschhhwwwo0o/b64sc.git
 ```
 
+If you are a macOS or Linux user, (Doesn't work on Windows¹) the project installation is done in 1 line of code in the terminal; to install application and module dependencies, copy this command and run it in the project root:
+
+```sh
+bash cli/project_installer.bash
+```
+
+_If the install script gives an error (Doesn't work on Windows¹), you must install the module dependencies yourself, compile the modules, install the application dependencies, and install husky to install it._
+
+Start the dev server using the command in the root of the project:
+
+```sh
+npm run dev
+```
+
+<br />
+<br />
+<br />
+<br />
+
 ## Dictionary of Terms.
 
 > _«A dictionary of terms defines all the specialized terms that the reader needs to know in order to properly understand the software requirements specification»_.
