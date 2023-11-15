@@ -32,7 +32,8 @@ class HTMLImageController {
    */
   public async copyImage(): Promise<void> {
     if (this._imageElement) {
-      const _canvasElement = document.createElement("canvas");
+      const _canvasElement: HTMLCanvasElement =
+        document.createElement("canvas");
       _canvasElement.width = this._imageElement.width;
       _canvasElement.height = this._imageElement.height;
 
@@ -45,7 +46,7 @@ class HTMLImageController {
           this._imageElement.width,
           this._imageElement.height,
         );
-      _canvasElement.toBlob(function _blobHandler(_blob) {
+      _canvasElement.toBlob(function _blobHandler(_blob: Blob | null) {
         try {
           if (_blob) {
             navigator.clipboard.write([
