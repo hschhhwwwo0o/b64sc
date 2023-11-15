@@ -3,10 +3,10 @@ class FeedbackCreator {
    * Sending feedback
    * @requirement UF/FEEDBACK/CREATE
    */
-  public async createFeedback(feedback: string = ""): Promise<void> {
+  public async createFeedback(feedbackText: string = ""): Promise<void> {
     return new Promise(function (resolve, reject) {
       setTimeout(() => {
-        if (feedback) {
+        if (feedbackText) {
           resolve();
         } else {
           reject();

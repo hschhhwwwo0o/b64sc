@@ -18,12 +18,12 @@ class HTMLImageController {
    * @requirement UF/FINAL-IMAGE/DOWNLOAD
    */
   public async downloadImage(): Promise<void> {
-    const _link = document.createElement("a");
-    _link.href = this._imageElement?.src || "";
-    _link.download = "Download.jpg";
-    document.body.appendChild(_link);
-    _link.click();
-    document.body.removeChild(_link);
+    const _linkElement = document.createElement("a");
+    _linkElement.href = this._imageElement?.src || "";
+    _linkElement.download = "Download.jpg";
+    document.body.appendChild(_linkElement);
+    _linkElement.click();
+    document.body.removeChild(_linkElement);
   }
 
   /**
@@ -32,11 +32,11 @@ class HTMLImageController {
    */
   public async copyImage(): Promise<void> {
     if (this._imageElement) {
-      const canvas = document.createElement("canvas");
-      canvas.width = this._imageElement.width;
-      canvas.height = this._imageElement.height;
+      const _canvasElement = document.createElement("canvas");
+      _canvasElement.width = this._imageElement.width;
+      _canvasElement.height = this._imageElement.height;
 
-      canvas
+      _canvasElement
         ?.getContext("2d")
         ?.drawImage(
           this._imageElement,
@@ -45,17 +45,19 @@ class HTMLImageController {
           this._imageElement.width,
           this._imageElement.height,
         );
-      canvas.toBlob((blob) => {
-        if (blob) {
-          try {
+      _canvasElement.toBlob(function _blobHandler(_blob) {
+        try {
+          if (_blob) {
             navigator.clipboard.write([
               new ClipboardItem({
-                "image/png": blob,
+                "image/png": _blob,
               }),
             ]);
-          } catch (error) {
-            console.error(error);
+          } else {
+            throw "Blob error";
           }
+        } catch (error) {
+          console.error(error);
         }
       }, "image/png");
     }
