@@ -10,7 +10,7 @@
       {{ status }}
     </div>
     <div>
-      <img v-bind:src="`${dataUrl}`" alt="result" />
+      <img :src="`${dataUrl}`" alt="result" />
     </div>
   </div>
 </template>
