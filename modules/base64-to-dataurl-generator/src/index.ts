@@ -33,7 +33,7 @@ class Base64ToDataURLGenerator {
       })(image);
 
       /** Draw image on canvas */
-      (function drawImageOnCanvas(
+      (function _drawImageOnCanvas(
         _canvasElement: HTMLCanvasElement,
         _imageElement: HTMLImageElement | null,
       ) {

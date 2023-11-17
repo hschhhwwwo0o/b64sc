@@ -44,7 +44,7 @@ class HTMLImageController {
     })(this._imageElement);
 
     /** Draw image on canvas */
-    (function drawImageOnCanvas(
+    (function _drawImageOnCanvas(
       _canvasElement: HTMLCanvasElement,
       _imageElement: HTMLImageElement | null,
     ) {
@@ -62,7 +62,7 @@ class HTMLImageController {
     })(_canvasElement, this._imageElement);
 
     /** Copy image to clipboard */
-    (function copyBlobImageToClipboard(_canvasElement: HTMLCanvasElement) {
+    (function _copyBlobImageToClipboard(_canvasElement: HTMLCanvasElement) {
       _canvasElement.toBlob(function _blobHandler(_blob: Blob | null) {
         try {
           if (_blob) {
