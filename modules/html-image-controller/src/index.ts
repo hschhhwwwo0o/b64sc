@@ -20,7 +20,7 @@ class HTMLImageController {
   public async downloadImage(): Promise<void> {
     const _linkElement = document.createElement("a");
     _linkElement.href = this._imageElement?.src || "";
-    _linkElement.download = "Download.jpg";
+    _linkElement.download = `b64sc-${new Date().getTime()}`;
     document.body.appendChild(_linkElement);
     _linkElement.click();
     document.body.removeChild(_linkElement);
@@ -31,21 +31,38 @@ class HTMLImageController {
    * @requirement UF/FINAL-IMAGE/COPY
    */
   public async copyImage(): Promise<void> {
-    if (this._imageElement) {
-      const _canvasElement: HTMLCanvasElement =
-        document.createElement("canvas");
-      _canvasElement.width = this._imageElement.width;
-      _canvasElement.height = this._imageElement.height;
+    /** Create canvas */
+    const _canvasElement: HTMLCanvasElement = (function _createCanvas(
+      _imageElement: HTMLImageElement | null,
+    ) {
+      const _canvas = document.createElement("canvas");
+      if (_imageElement) {
+        _canvas.width = _imageElement.width;
+        _canvas.height = _imageElement.height;
+      }
+      return _canvas;
+    })(this._imageElement);
 
-      _canvasElement
-        ?.getContext("2d")
-        ?.drawImage(
-          this._imageElement,
-          0,
-          0,
-          this._imageElement.width,
-          this._imageElement.height,
-        );
+    /** Draw image on canvas */
+    (function drawImageOnCanvas(
+      _canvasElement: HTMLCanvasElement,
+      _imageElement: HTMLImageElement | null,
+    ) {
+      if (_imageElement) {
+        _canvasElement
+          ?.getContext("2d")
+          ?.drawImage(
+            _imageElement,
+            0,
+            0,
+            _imageElement.width,
+            _imageElement.height,
+          );
+      }
+    })(_canvasElement, this._imageElement);
+
+    /** Copy image to clipboard */
+    (function copyBlobImageToClipboard(_canvasElement: HTMLCanvasElement) {
       _canvasElement.toBlob(function _blobHandler(_blob: Blob | null) {
         try {
           if (_blob) {
@@ -61,7 +78,7 @@ class HTMLImageController {
           console.error(error);
         }
       }, "image/png");
-    }
+    })(_canvasElement);
   }
 }
 

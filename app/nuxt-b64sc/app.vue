@@ -1,5 +1,15 @@
 <template>
   <div>
-    <h1>Whereas disregard and contempt for human rights have resulted</h1>
+    {{ foo }}
   </div>
 </template>
+
+<script>
+export default {
+  data: () => {
+    return {
+      foo: "Launch",
+    };
+  },
+};
+</script>
