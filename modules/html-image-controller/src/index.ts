@@ -3,7 +3,7 @@ class HTMLImageController {
 
   constructor(imageElementID = "") {
     const imageElement: HTMLImageElement | null = document.querySelector(
-      `#${imageElementID}`,
+      `#${imageElementID.replace("#", "")}`,
     );
     if (imageElement === null) {
       console.warn(

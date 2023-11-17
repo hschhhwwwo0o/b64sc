@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts">
-import { Base64ToDataURLGenerator } from "../../modules/base64-to-dataurl-generator";
+import { Base64ToDataURLGenerator } from "../../modules/base64-to-dataurl-generator/dist";
 
 export default {
   data: () => {
@@ -27,7 +27,7 @@ export default {
     };
   },
   watch: {
-    base64textarea: async function (value) {
+    base64textarea: async function (value: string) {
       this.status = "Loading...";
       const base64ToDataURLGenerator = new Base64ToDataURLGenerator();
       const dataUrl = await base64ToDataURLGenerator.generateDataURL(value);
