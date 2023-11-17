@@ -14,11 +14,11 @@ class Base64ToDataURLGenerator {
       if (base64.includes("data:image/jpeg;base64,")) {
         return base64;
       }
-      const dataUrl1: string = `data:image/png;base64,${base64}`;
+      const dataUrlBase64: string = `data:image/png;base64,${base64}`;
 
       const image = new Image();
       image.setAttribute("crossorigin", "anonymous");
-      image.src = dataUrl1;
+      image.src = dataUrlBase64;
       await image.decode();
 
       const _canvasElement: HTMLCanvasElement = (function _createCanvas(
@@ -50,9 +50,9 @@ class Base64ToDataURLGenerator {
         }
       })(_canvasElement, image);
 
-      const dataUrl2 = _canvasElement.toDataURL("image/png", 1);
+      const dataUrl = _canvasElement.toDataURL("image/png", 1);
 
-      return dataUrl2;
+      return dataUrl;
     } catch (error) {
       console.error(error);
     }
