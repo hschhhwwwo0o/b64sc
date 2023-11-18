@@ -47,7 +47,7 @@ class HTMLImageController {
     (function _drawImageOnCanvas(
       _canvasElement: HTMLCanvasElement,
       _imageElement: HTMLImageElement | null,
-    ) {
+    ): void {
       if (_imageElement) {
         _canvasElement
           ?.getContext("2d")
@@ -62,7 +62,9 @@ class HTMLImageController {
     })(_canvasElement, this._imageElement);
 
     /** Copy image to clipboard */
-    (function _copyBlobImageToClipboard(_canvasElement: HTMLCanvasElement) {
+    (function _copyBlobImageToClipboard(
+      _canvasElement: HTMLCanvasElement,
+    ): void {
       _canvasElement.toBlob(function _blobHandler(_blob: Blob | null) {
         try {
           if (_blob) {
