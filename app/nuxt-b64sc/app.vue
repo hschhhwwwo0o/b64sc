@@ -1,6 +1,6 @@
 <template>
   <div>
-    <default-layout></default-layout>
+    <default-layout with-separated-b-g></default-layout>
   </div>
 </template>
 
