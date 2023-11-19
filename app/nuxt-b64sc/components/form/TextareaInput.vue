@@ -4,6 +4,8 @@
       :class="`${styleClass}`"
       :name="name"
       :placeholder="placeholder"
+      :value="value"
+      @input="$emit('update:value', $event.target.value)"
     />
   </span>
 </template>
@@ -29,7 +31,13 @@ export default {
       default: "textarea.",
       required: true,
     },
+    value: {
+      type: String,
+      default: "",
+      required: true,
+    },
   },
+  emits: ["update:value"],
   computed: {
     styleClass() {
       if (this.style === "standart") {
