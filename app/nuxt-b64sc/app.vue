@@ -1,7 +1,13 @@
 <template>
-  <div></div>
+  <div>
+    <default-layout></default-layout>
+  </div>
 </template>
 
-<script lang="ts">
-export default {};
+<script>
+import DefaultLayout from "./components/layouts/DefaultLayout.vue";
+
+export default {
+  components: { DefaultLayout },
+};
 </script>
