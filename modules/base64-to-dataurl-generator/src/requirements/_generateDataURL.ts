@@ -2,7 +2,9 @@
  * Generate dataURL
  * @requirement UF/FINAL-IMAGE/DATA-URL
  */
-export async function _generateDataURL(base64: string = "") {
+export async function _generateDataURL(
+  base64: string = "",
+): Promise<string | undefined> {
   try {
     if (base64.includes("data:image/png;base64,")) {
       return base64;
@@ -14,7 +16,7 @@ export async function _generateDataURL(base64: string = "") {
       return base64;
     }
 
-    const dataUrlBase64: string = (function _formatBase64String() {
+    const dataUrlBase64: string = (function _formatBase64String(): string {
       return `data:image/png;base64,${base64}`;
     })();
 
@@ -43,7 +45,7 @@ export async function _generateDataURL(base64: string = "") {
     (function _drawImageOnCanvas(
       _canvasElement: HTMLCanvasElement,
       _imageElement: HTMLImageElement | null,
-    ) {
+    ): void {
       if (_imageElement) {
         _canvasElement
           ?.getContext("2d")
@@ -57,7 +59,7 @@ export async function _generateDataURL(base64: string = "") {
       }
     })(_canvasElement, image);
 
-    const dataUrl = _canvasElement.toDataURL("image/png", 1);
+    const dataUrl: string = _canvasElement.toDataURL("image/png", 1);
 
     return dataUrl;
   } catch (error) {
