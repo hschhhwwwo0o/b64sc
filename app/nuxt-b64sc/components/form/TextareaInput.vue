@@ -1,5 +1,8 @@
 <template>
   <span class="container">
+    <span :class="`label ${labelStyleClass}`">
+      {{ label }}
+    </span>
     <textarea
       :class="`${styleClass}`"
       :name="name"
@@ -36,6 +39,11 @@ export default {
       default: "",
       required: true,
     },
+    label: {
+      type: String,
+      default: "",
+      required: false,
+    },
   },
   emits: ["update:value"],
   computed: {
@@ -47,6 +55,15 @@ export default {
         return "contrast";
       }
       return "standart";
+    },
+    labelStyleClass() {
+      if (this.style === "standart") {
+        return "standart-label";
+      }
+      if (this.style === "contrast") {
+        return "contrast-label";
+      }
+      return "standart-label";
     },
   },
 };
@@ -70,6 +87,8 @@ export default {
   background-color: transparent;
   border-color: $brandColor;
   color: $brandColor;
+  box-sizing: border-box;
+  min-height: 90px;
 
   &::placeholder {
     color: $brandColor;
@@ -87,10 +106,25 @@ export default {
   background-color: transparent;
   border-color: $white;
   color: $white;
+  box-sizing: border-box;
+  min-height: 90px;
 
   &::placeholder {
     color: $white;
     opacity: 0.5;
   }
+}
+
+.label {
+  display: block;
+  padding-bottom: 10px;
+}
+
+.standart-label {
+  color: $white;
+}
+
+.contrast-label {
+  color: $brandColor;
 }
 </style>

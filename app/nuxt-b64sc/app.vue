@@ -1,13 +1,22 @@
 <template>
   <div>
-    <default-layout> hi </default-layout>
+    <horizontal-separated-layout>
+      <template #left-side>
+        <base-64-textarea-input />
+      </template>
+      <template #right-side> </template>
+    </horizontal-separated-layout>
   </div>
 </template>
 
 <script>
-import DefaultLayout from "./components/layouts/DefaultLayout.vue";
+import HorizontalSeparatedLayout from "./components/layouts/HorizontalSeparatedLayout.vue";
+import { Base64ConverterModuleUI } from "./modules-ui/Base64Converter/index";
 
 export default {
-  components: { DefaultLayout },
+  components: {
+    HorizontalSeparatedLayout,
+    Base64TextareaInput: Base64ConverterModuleUI.view.Base64TextareaInput,
+  },
 };
 </script>

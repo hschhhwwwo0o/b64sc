@@ -36,6 +36,12 @@ export default {};
   width: 50vw;
   min-height: 100vh;
   height: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .left-side {
