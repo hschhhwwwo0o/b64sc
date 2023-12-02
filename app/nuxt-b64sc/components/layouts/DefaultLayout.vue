@@ -1,51 +1,48 @@
 <template>
-  <span :class="`container ${withSeparatedBGClass}`">
+  <span class="container">
     <span class="content">
-      <slot />
+      <span class="left-side side">
+        <slot name="left-side" />
+      </span>
+      <span class="right-side side">
+        <slot name="right-side" />
+      </span>
     </span>
   </span>
 </template>
 
 <script>
-export default {
-  props: {
-    withSeparatedBG: {
-      type: Boolean,
-      default: false,
-    },
-  },
-  computed: {
-    withSeparatedBGClass() {
-      if (this.withSeparatedBG === true) {
-        return "separated-bg";
-      }
-      return "";
-    },
-  },
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
 @import "../../assets/styles/_vars.scss";
 
 .container {
-  display: flex;
-  width: 100%;
-  height: 100%;
   min-height: 100vh;
-  justify-content: center;
-}
-
-.separated-bg {
-  background: rgb(26, 26, 26);
-  background: linear-gradient(90deg, $black 50%, $white 50%);
+  width: 100%;
+  display: block;
 }
 
 .content {
-  width: 100%;
-  max-width: 1440px;
-  height: 100%;
+  display: flex;
   min-height: 100vh;
-  display: block;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.side {
+  width: 50vw;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.left-side {
+  background-color: $black;
+}
+
+.right-side {
+  background-color: $white;
 }
 </style>
