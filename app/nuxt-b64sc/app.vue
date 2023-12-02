@@ -1,9 +1,6 @@
 <template>
   <div>
-    <default-layout>
-      <template #left-side> hi </template>
-      <template #right-side> hi </template>
-    </default-layout>
+    <default-layout> hi </default-layout>
   </div>
 </template>
 

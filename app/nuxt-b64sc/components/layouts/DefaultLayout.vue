@@ -1,11 +1,8 @@
 <template>
   <span class="container">
-    <span class="content">
-      <span class="left-side side">
-        <slot name="left-side" />
-      </span>
-      <span class="right-side side">
-        <slot name="right-side" />
+    <span>
+      <span class="content">
+        <slot />
       </span>
     </span>
   </span>
@@ -25,24 +22,7 @@ export default {};
 }
 
 .content {
-  display: flex;
   min-height: 100vh;
   width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.side {
-  width: 50vw;
-  min-height: 100vh;
-  height: 100%;
-}
-
-.left-side {
-  background-color: $black;
-}
-
-.right-side {
-  background-color: $white;
 }
 </style>
