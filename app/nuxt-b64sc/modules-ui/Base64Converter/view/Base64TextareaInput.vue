@@ -5,6 +5,8 @@
       :placeholder="'Enter base64 string...'"
       :style="'contrast'"
       :name="'base 64 input'"
+      :value="base64String"
+      @change="changeBase64String(event)"
     />
   </div>
 </template>
@@ -15,6 +17,14 @@ import TextareaInput from "../../../components/form/TextareaInput.vue";
 export default {
   components: {
     TextareaInput,
+  },
+  data() {
+    return {
+      base64String: "",
+    };
+  },
+  methods: {
+    changeBase64String() {},
   },
 };
 </script>

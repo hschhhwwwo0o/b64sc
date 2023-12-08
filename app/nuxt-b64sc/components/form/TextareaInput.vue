@@ -8,7 +8,7 @@
       :name="name"
       :placeholder="placeholder"
       :value="value"
-      @input="$emit('update:value', $event.target.value)"
+      @input="$emit('change', $event.target.value)"
     />
   </span>
 </template>
@@ -45,7 +45,7 @@ export default {
       required: false,
     },
   },
-  emits: ["update:value"],
+  emits: ["change"],
   computed: {
     styleClass() {
       if (this.style === "standart") {
