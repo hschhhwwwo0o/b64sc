@@ -15,3 +15,13 @@ input:focus {
 textarea:focus {
   outline: none !important;
 }
+
+.horizontal-paddings {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.vertical-paddings {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}

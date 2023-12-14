@@ -20,7 +20,7 @@ export default {
       type: String,
       default: "standart",
       validator(value) {
-        ["standart", "contrast"].includes(value);
+        return ["standart", "contrast"].includes(value);
       },
       required: true,
     },
