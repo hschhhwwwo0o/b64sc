@@ -8,14 +8,15 @@
               <h-1-text>B64SC / Base64StringConverter</h-1-text>
               <div class="top-2">
                 <paragraph-text>
-                  Converter base64 strings to high quality images for further
-                  image download/copying. Base64 is a group of similar
-                  binary-to-text encoding schemes that represent binary data in
-                  an ASCII string format by translating it into a radix-64
-                  representation. Use the simple and intuitive user interface of
-                  our service to convert base64 string. Just enter the base64
-                  string in the appropriate field and download your image in the
-                  highest quality without watermarks.
+                  &nbsp; &nbsp; &nbsp; &nbsp; Converter base64 strings to high
+                  quality images for further image download/copying. Base64 is a
+                  group of similar binary-to-text encoding schemes that
+                  represent binary data in an ASCII string format by translating
+                  it into a radix-64 representation. Use the simple and
+                  intuitive user interface of our service to convert base64
+                  string. Just enter the base64 string in the appropriate field
+                  and download your image in the highest quality without
+                  watermarks.
                 </paragraph-text>
               </div>
             </div>
@@ -50,9 +51,9 @@
             <h-1-text :color="'dark'">Result</h-1-text>
             <div class="top-2">
               <paragraph-text :color="'dark'">
-                The result of the service will appear in the highlighted window
-                below after specifying the base64 string in the corresponding
-                field
+                &nbsp; &nbsp; &nbsp; &nbsp; The result of the service will
+                appear in the highlighted window below after specifying the
+                base64 string in the corresponding field
               </paragraph-text>
             </div>
           </div>
