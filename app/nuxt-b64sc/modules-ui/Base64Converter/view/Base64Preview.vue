@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { mapStores, mapWritableState } from "pinia";
-import { useBase64StringStore } from "../store/index";
+import { useBase64StringStore } from "../controllers/index";
 
 export default {
   computed: {
