@@ -31,10 +31,10 @@ export default {
   display: block;
 }
 .paragraph {
-  font-family: Playfair Display;
+  font-family: "Playfair Display";
   font-size: 14px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   line-height: normal;
 }
 </style>

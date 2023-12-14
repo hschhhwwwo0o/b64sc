@@ -31,7 +31,7 @@ export default {
   display: block;
 }
 .h2 {
-  font-family: Playfair Display;
+  font-family: "Playfair Display";
   font-size: 20px;
   font-style: normal;
   font-weight: 600;

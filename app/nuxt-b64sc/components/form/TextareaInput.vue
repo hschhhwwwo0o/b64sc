@@ -89,10 +89,12 @@ export default {
   color: $brandColor;
   box-sizing: border-box;
   min-height: 90px;
+  font-family: "Playfair Display";
 
   &::placeholder {
     color: $brandColor;
     opacity: 0.5;
+    font-family: "Playfair Display";
   }
 }
 
@@ -108,16 +110,19 @@ export default {
   color: $white;
   box-sizing: border-box;
   min-height: 90px;
+  font-family: "Playfair Display";
 
   &::placeholder {
     color: $white;
     opacity: 0.5;
+    font-family: "Playfair Display";
   }
 }
 
 .label {
   display: block;
   padding-bottom: 10px;
+  font-family: "Playfair Display";
 }
 
 .standart-label {
