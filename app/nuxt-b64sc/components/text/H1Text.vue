@@ -13,7 +13,7 @@ export default {
       type: String,
       default: "light",
       required: true,
-      validator(value) {
+      validator(value: string) {
         return ["light", "dark"].includes(value);
       },
     },
@@ -34,7 +34,7 @@ export default {
   font-family: Playfair Display;
   font-size: 20px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: normal;
 }
 </style>

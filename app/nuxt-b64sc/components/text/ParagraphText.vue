@@ -6,21 +6,21 @@
   </span>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   props: {
     color: {
       type: String,
       default: "light",
       required: true,
-      validator(value) {
+      validator(value: string) {
         return ["light", "dark"].includes(value);
       },
     },
   },
   computed: {
     paragraphColor() {
-      return this.color === "light" ? "#ADADAD" : "#2D2D2D";
+      return this.color === "light" ? "color: #ADADAD" : "color: #2D2D2D";
     },
   },
 };
@@ -32,7 +32,7 @@ export default {
 }
 .paragraph {
   font-family: Playfair Display;
-  font-size: 12px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
