@@ -5,9 +5,9 @@
     </span>
     <textarea
       :class="`${styleClass}`"
-      :name="name"
-      :placeholder="placeholder"
-      :value="value"
+      :name="`${name}`"
+      :placeholder="`${placeholder}`"
+      :value="`${value}`"
       @input="$emit('change', $event.target.value)"
     />
   </span>

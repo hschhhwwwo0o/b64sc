@@ -6,25 +6,29 @@
       :style="'contrast'"
       :name="'base 64 input'"
       :value="base64String"
-      @change="changeBase64String(event)"
+      @change="(newValue) => changeBase64String(newValue)"
     />
   </div>
 </template>
 
 <script lang="ts">
+import { mapStores, mapWritableState } from "pinia";
+import { useBase64StringStore } from "../store/index";
+
 import TextareaInput from "../../../components/form/TextareaInput.vue";
 
 export default {
   components: {
     TextareaInput,
   },
-  data() {
-    return {
-      base64String: "",
-    };
+  computed: {
+    ...mapWritableState(useBase64StringStore, ["base64String"]),
+    ...mapStores(useBase64StringStore),
   },
   methods: {
-    changeBase64String() {},
+    changeBase64String(newValue: string) {
+      this.base64StringStore.changeBase64String(newValue);
+    },
   },
 };
 </script>
