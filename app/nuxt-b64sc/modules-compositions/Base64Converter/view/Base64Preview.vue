@@ -1,7 +1,5 @@
 <template>
-  <div>
-    {{ base64String }}
-  </div>
+  <div class="preview"></div>
 </template>
 
 <script lang="ts">
@@ -15,3 +13,16 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+@import "../../../assets/styles/_vars.scss";
+
+.preview {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: $brandColor;
+  flex-grow: 1;
+  flex-wrap: wrap;
+}
+</style>

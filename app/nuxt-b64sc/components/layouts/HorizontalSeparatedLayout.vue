@@ -49,7 +49,8 @@ export default {};
   width: 50vw;
   min-height: 100vh;
   height: 100%;
-  display: block;
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
 }
 

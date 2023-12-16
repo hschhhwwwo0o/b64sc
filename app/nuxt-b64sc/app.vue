@@ -59,7 +59,16 @@
           </div>
           <border-separate :style="'light'" />
         </div>
-        <div>
+        <div
+          style="
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-grow: 1;
+            flex-direction: column;
+          "
+          class="horizontal-paddings vertical-paddings"
+        >
           <base-64-preview />
         </div>
       </template>
@@ -72,13 +81,13 @@
 import BorderSeparate from "./components/decore/BorderSeparate.vue";
 import H1Text from "./components/text/H1Text.vue";
 import ParagraphText from "./components/text/ParagraphText.vue";
+import LinkText from "./components/text/LinkText.vue";
 
 /** Layouts */
 import HorizontalSeparatedLayout from "./components/layouts/HorizontalSeparatedLayout.vue";
 
 /** Modules compositions */
 import { Base64ConverterModuleUI } from "./modules-compositions/Base64Converter/index";
-import LinkText from "./components/text/LinkText.vue";
 
 export default {
   components: {
