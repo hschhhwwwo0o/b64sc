@@ -1,8 +1,10 @@
 <template>
+  <!-- @requirement UF/FINAL-IMAGE/PREVIEW -->
   <div class="preview"></div>
 </template>
 
 <script lang="ts">
+/** Connect store */
 import { mapStores, mapWritableState } from "pinia";
 import { useBase64StringStore } from "../controllers/index";
 

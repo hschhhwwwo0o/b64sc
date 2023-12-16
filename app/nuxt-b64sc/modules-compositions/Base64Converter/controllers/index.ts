@@ -7,6 +7,9 @@ export const useBase64StringStore = defineStore("base64String", {
     };
   },
   actions: {
+    /**
+     * @requirement UF/INPUT-BASE64
+     */
     changeBase64String(newValue: string = "") {
       this.base64String = newValue;
     },

@@ -11,6 +11,7 @@ const Base64ConverterModuleUI = {
     Base64TextareaInput,
   },
   utils: {
+    /** @requirement UF/CLEAR-INPUT-BASE64 */
     clear: _clear,
   },
 };
