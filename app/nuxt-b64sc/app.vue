@@ -81,6 +81,7 @@
           "
           class="horizontal-paddings vertical-paddings"
         >
+          <final-image-controls />
           <base-64-preview />
         </div>
       </template>
@@ -97,6 +98,8 @@ export default {
     Base64TextareaInput:
       Base64ConverterModuleComposition.view.Base64TextareaInput,
     Base64Preview: Base64ConverterModuleComposition.view.Base64Preview,
+    FinalImageControls:
+      Base64ConverterModuleComposition.view.FinalImageControls,
   },
 };
 </script>

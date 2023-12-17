@@ -1,16 +1,6 @@
 <template>
   <!-- @requirement UF/FINAL-IMAGE/PREVIEW -->
   <div class="cont">
-    <div v-if="dataUrl" class="top-panel">
-      <!-- @requirement UF/FINAL-IMAGE/DOWNLOAD -->
-      <form-text-button :color="'contrast'" @click="downloadImage"
-        >Download</form-text-button
-      >
-      <!-- @requirement UF/FINAL-IMAGE/COPY -->
-      <form-text-button :color="'contrast'" @click="copyImage"
-        >Copy</form-text-button
-      >
-    </div>
     <div :class="!dataUrl ? 'preview-text' : 'preview-image'">
       <div v-if="!dataUrl" class="text-cont">
         <text-paragraph-element :color="'ultra-light'">
@@ -39,20 +29,6 @@ export default {
     ...mapWritableState(useBase64StringStore, ["base64String", "dataUrl"]),
     ...mapStores(useBase64StringStore),
   },
-  methods: {
-    /**
-     * @requirement UF/FINAL-IMAGE/DOWNLOAD
-     */
-    async downloadImage(): Promise<void> {
-      await this.base64StringStore.downloadImage();
-    },
-    /**
-     * @requirement UF/FINAL-IMAGE/COPY
-     */
-    async copyImage(): Promise<void> {
-      await this.base64StringStore.copyImage();
-    },
-  },
 };
 </script>
 
@@ -61,7 +37,7 @@ export default {
 
 .cont {
   width: 100%;
-  height: 100%;
+  height: 0px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -110,14 +86,5 @@ export default {
 
 .text-cont {
   max-width: 320px;
-}
-
-.top-panel {
-  height: 0px;
-  position: relative;
-  top: -30px;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
 }
 </style>

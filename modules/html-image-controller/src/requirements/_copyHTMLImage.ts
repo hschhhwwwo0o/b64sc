@@ -3,7 +3,6 @@
  * @requirement UF/FINAL-IMAGE/COPY
  */
 export function _copyHTMLImage(_imageElement: HTMLImageElement | null = null) {
-  console.log("?");
   /** Create canvas */
   const _canvasElement: HTMLCanvasElement = (function _createCanvas(
     _imageElement: HTMLImageElement | null,
@@ -15,8 +14,6 @@ export function _copyHTMLImage(_imageElement: HTMLImageElement | null = null) {
     }
     return _canvas;
   })(_imageElement);
-
-  console.log("??");
 
   /** Draw image on canvas */
   (function _drawImageOnCanvas(
