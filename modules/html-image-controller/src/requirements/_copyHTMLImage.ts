@@ -3,6 +3,7 @@
  * @requirement UF/FINAL-IMAGE/COPY
  */
 export function _copyHTMLImage(_imageElement: HTMLImageElement | null = null) {
+  console.log("?");
   /** Create canvas */
   const _canvasElement: HTMLCanvasElement = (function _createCanvas(
     _imageElement: HTMLImageElement | null,
@@ -14,6 +15,8 @@ export function _copyHTMLImage(_imageElement: HTMLImageElement | null = null) {
     }
     return _canvas;
   })(_imageElement);
+
+  console.log("??");
 
   /** Draw image on canvas */
   (function _drawImageOnCanvas(
@@ -33,22 +36,16 @@ export function _copyHTMLImage(_imageElement: HTMLImageElement | null = null) {
     }
   })(_canvasElement, _imageElement);
 
-  /** Copy image to clipboard */
-  (function _copyBlobImageToClipboard(_canvasElement: HTMLCanvasElement): void {
-    _canvasElement.toBlob(function _blobHandler(_blob: Blob | null) {
-      try {
-        if (_blob) {
-          navigator.clipboard.write([
-            new ClipboardItem({
-              "image/png": _blob,
-            }),
-          ]);
-        } else {
-          throw "Blob error";
-        }
-      } catch (error) {
-        console.error(error);
-      }
-    }, "image/png");
-  })(_canvasElement);
+  async function getBlobImage(): Promise<Blob> {
+    const blob: Blob | PromiseLike<Blob> | null = await new Promise((resolve) =>
+      _canvasElement.toBlob(resolve),
+    );
+    return blob || new Blob();
+  }
+
+  navigator.clipboard.write([
+    new ClipboardItem({
+      "image/png": getBlobImage(),
+    }),
+  ]);
 }

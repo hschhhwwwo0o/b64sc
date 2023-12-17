@@ -1,10 +1,14 @@
 <template>
   <!-- @requirement UF/FINAL-IMAGE/PREVIEW -->
   <div class="cont">
-    <div v-if="dataUrl" class="download-button">
+    <div v-if="dataUrl" class="top-panel">
       <!-- @requirement UF/FINAL-IMAGE/DOWNLOAD -->
       <form-text-button :color="'contrast'" @click="downloadImage"
         >Download</form-text-button
+      >
+      <!-- @requirement UF/FINAL-IMAGE/COPY -->
+      <form-text-button :color="'contrast'" @click="copyImage"
+        >Copy</form-text-button
       >
     </div>
     <div :class="!dataUrl ? 'preview-text' : 'preview-image'">
@@ -41,6 +45,12 @@ export default {
      */
     async downloadImage(): Promise<void> {
       await this.base64StringStore.downloadImage();
+    },
+    /**
+     * @requirement UF/FINAL-IMAGE/COPY
+     */
+    async copyImage(): Promise<void> {
+      await this.base64StringStore.copyImage();
     },
   },
 };
@@ -102,9 +112,12 @@ export default {
   max-width: 320px;
 }
 
-.download-button {
+.top-panel {
   height: 0px;
   position: relative;
   top: -30px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 </style>
