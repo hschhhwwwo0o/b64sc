@@ -39,11 +39,14 @@ export default {};
   width: 100%;
   max-width: 1440px;
   display: block;
-  border-style: solid;
-  border-right-width: 1px;
-  border-left-width: 1px;
-  border-left-color: $separateDarkGray;
-  border-right-color: $separateLightGray;
+
+  @media screen and (min-width: 1440px) {
+    border-style: solid;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-left-color: $separateDarkGray;
+    border-right-color: $separateLightGray;
+  }
 }
 
 .horizontal-separated-content {
