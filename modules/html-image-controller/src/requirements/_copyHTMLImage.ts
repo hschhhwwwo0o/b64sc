@@ -36,16 +36,18 @@ export function _copyHTMLImage(_imageElement: HTMLImageElement | null = null) {
     }
   })(_canvasElement, _imageElement);
 
-  async function getBlobImage(): Promise<Blob> {
+  /** Create blob */
+  async function _getBlobImage(): Promise<Blob> {
     const blob: Blob | PromiseLike<Blob> | null = await new Promise((resolve) =>
       _canvasElement.toBlob(resolve),
     );
     return blob || new Blob();
   }
 
+  /** Copy blob */
   navigator.clipboard.write([
     new ClipboardItem({
-      "image/png": getBlobImage(),
+      "image/png": _getBlobImage(),
     }),
   ]);
 }
