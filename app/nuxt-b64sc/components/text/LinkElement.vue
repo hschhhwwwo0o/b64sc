@@ -15,21 +15,16 @@
         />
       </svg>
       <span class="text">
-        <paragraph-text>
+        <text-paragraph-element>
           <slot />
-        </paragraph-text>
+        </text-paragraph-element>
       </span>
     </span>
   </nuxt-link>
 </template>
 
 <script lang="ts">
-import ParagraphText from "./ParagraphText.vue";
-
 export default {
-  components: {
-    ParagraphText,
-  },
   props: {
     to: {
       type: String,

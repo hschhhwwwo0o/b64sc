@@ -1,17 +1,24 @@
 <template>
   <!-- @requirement UF/FINAL-IMAGE/PREVIEW -->
-  <div :class="!dataUrl ? 'preview-text' : 'preview-image'">
-    <div v-if="!dataUrl" class="text-cont">
-      <paragraph-text :color="'ultra-light'">
-        &nbsp; &nbsp; &nbsp; &nbsp; This window will display the image after
-        inserting the base64 string into the corresponding field.
-      </paragraph-text>
-      <br />
-      <paragraph-text :color="'ultra-light'">
-        &nbsp; &nbsp; &nbsp; &nbsp; Now the image is not loaded.
-      </paragraph-text>
+  <div class="cont">
+    <div v-if="dataUrl" class="download-button">
+      <form-text-button :color="'contrast'">Download</form-text-button>
     </div>
-    <img v-if="dataUrl" :src="dataUrl" alt="Image" />
+    <div :class="!dataUrl ? 'preview-text' : 'preview-image'">
+      <div v-if="!dataUrl" class="text-cont">
+        <text-paragraph-element :color="'ultra-light'">
+          &nbsp; &nbsp; &nbsp; &nbsp; This window will display the image after
+          inserting the base64 string into the corresponding field.
+        </text-paragraph-element>
+        <br />
+        <text-paragraph-element :color="'ultra-light'">
+          &nbsp; &nbsp; &nbsp; &nbsp; Now the image is not loaded.
+        </text-paragraph-element>
+      </div>
+      <div v-if="dataUrl">
+        <img :src="dataUrl" alt="Image" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -19,10 +26,8 @@
 /** Connect store */
 import { mapStores, mapWritableState } from "pinia";
 import { useBase64StringStore } from "../controllers/index";
-import ParagraphText from "../../../components/text/ParagraphText.vue";
 
 export default {
-  components: { ParagraphText },
   computed: {
     ...mapWritableState(useBase64StringStore, ["base64String", "dataUrl"]),
     ...mapStores(useBase64StringStore),
@@ -32,6 +37,16 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../../assets/styles/_vars.scss";
+
+.cont {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
 
 .preview-text {
   width: 100%;
@@ -74,5 +89,11 @@ export default {
 
 .text-cont {
   max-width: 320px;
+}
+
+.download-button {
+  height: 0px;
+  position: relative;
+  top: -30px;
 }
 </style>
