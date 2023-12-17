@@ -43,6 +43,10 @@ export default {
   padding: 25px;
   box-sizing: border-box;
   max-height: 550px;
+
+  @media screen and (max-width: 500px) {
+    height: calc(50vh - 70px);
+  }
 }
 
 .preview-image {
@@ -57,6 +61,10 @@ export default {
   align-items: center;
   justify-content: center;
   max-height: 550px;
+
+  @media screen and (max-width: 500px) {
+    height: calc(50vh - 70px);
+  }
 }
 
 .preview-image img {

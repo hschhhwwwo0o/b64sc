@@ -28,6 +28,10 @@ export default {};
   align-items: center;
   background: rgb(26, 26, 26);
   background: linear-gradient(90deg, $black 50%, $white 50%);
+
+  @media screen and (max-width: 600px) {
+    display: block;
+  }
 }
 
 .container {
@@ -48,6 +52,11 @@ export default {};
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    min-height: auto;
+  }
 }
 
 .side {
@@ -57,6 +66,11 @@ export default {};
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    min-height: auto;
+  }
 }
 
 .left-side {

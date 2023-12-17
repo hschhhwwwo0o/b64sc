@@ -1,6 +1,7 @@
 <template>
   <span class="container">
     <svg
+      class="link-ico"
       width="13"
       height="14"
       viewBox="0 0 13 14"
@@ -36,6 +37,10 @@ export default {
   flex-direction: row;
   align-items: center;
   cursor: pointer;
+}
+
+.link-ico {
+  flex-shrink: 0;
 }
 
 .text {
