@@ -6,13 +6,13 @@
   </span>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   props: {
     color: {
       type: String,
       default: "white",
-      validator(value) {
+      validator(value: string) {
         return ["white", "contrast", "danger"].includes(value);
       },
     },

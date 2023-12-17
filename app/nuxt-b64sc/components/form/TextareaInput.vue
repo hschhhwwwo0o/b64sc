@@ -13,13 +13,13 @@
   </span>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   props: {
     style: {
       type: String,
       default: "standart",
-      validator(value) {
+      validator(value: string): boolean {
         return ["standart", "contrast"].includes(value);
       },
       required: true,

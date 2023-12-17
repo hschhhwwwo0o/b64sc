@@ -13,7 +13,7 @@ export default {
       type: String,
       default: "light",
       required: true,
-      validator(value: string) {
+      validator(value: string): boolean {
         return ["light", "dark"].includes(value);
       },
     },

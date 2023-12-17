@@ -11,7 +11,7 @@ export default {
   props: {
     style: {
       type: String,
-      validator(value: string) {
+      validator(value: string): boolean {
         return ["light", "dark"].includes(value);
       },
       required: true,

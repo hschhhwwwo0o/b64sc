@@ -32,7 +32,7 @@ export default {
     /**
      * @requirement UF/INPUT-BASE64
      */
-    changeBase64String(newValue: string) {
+    changeBase64String(newValue: string): void {
       this.base64StringStore.changeBase64String(newValue);
     },
   },
