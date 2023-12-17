@@ -33,14 +33,24 @@
           <div>
             <div class="horizontal-paddings vertical-paddings">
               <div>
-                <link-text>Human Interface Guidelines</link-text>
-              </div>
-              <div class="top-2">
-                <link-text>Human Guidelines</link-text>
+                <link-text
+                  :to="'https://github.com/hschhhwwwo0o/b64sc'"
+                  :target="'_blank'"
+                  >The project has been posted on GitHub</link-text
+                >
               </div>
               <div class="top-2">
                 <link-text
-                  >More info about Human Interface Guidelines</link-text
+                  :to="'https://github.com/hschhhwwwo0o'"
+                  :target="'_blank'"
+                  >Project author on GitHub</link-text
+                >
+              </div>
+              <div class="top-2">
+                <link-text
+                  :to="'https://telegram.dog/hschhhwwwo0o'"
+                  :target="'_blank'"
+                  >Project author on Telegram</link-text
                 >
               </div>
             </div>
