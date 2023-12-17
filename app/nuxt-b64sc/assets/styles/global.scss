@@ -20,7 +20,7 @@ textarea:focus {
   padding-left: 75px;
   padding-right: 75px;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 900px) {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -30,7 +30,7 @@ textarea:focus {
   padding-top: 50px;
   padding-bottom: 50px;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 900px) {
     padding-top: 30px;
     padding-bottom: 30px;
   }

@@ -44,7 +44,7 @@ export default {
   box-sizing: border-box;
   max-height: 550px;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 900px) {
     height: calc(50vh - 70px);
   }
 }
@@ -62,7 +62,7 @@ export default {
   justify-content: center;
   max-height: 550px;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 900px) {
     height: calc(50vh - 70px);
   }
 }

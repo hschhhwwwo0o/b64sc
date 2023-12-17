@@ -29,7 +29,7 @@ export default {};
   background: rgb(26, 26, 26);
   background: linear-gradient(90deg, $black 50%, $white 50%);
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 900px) {
     display: block;
   }
 }
@@ -53,7 +53,7 @@ export default {};
   flex-direction: row;
   justify-content: space-between;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 900px) {
     flex-direction: column;
     min-height: auto;
   }
@@ -67,7 +67,7 @@ export default {};
   flex-direction: column;
   box-sizing: border-box;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 900px) {
     width: 100%;
     min-height: auto;
   }
