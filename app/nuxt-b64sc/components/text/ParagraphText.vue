@@ -14,13 +14,22 @@ export default {
       default: "light",
       required: true,
       validator(value: string): boolean {
-        return ["light", "dark"].includes(value);
+        return ["light", "ultra-light", "dark"].includes(value);
       },
     },
   },
   computed: {
     paragraphColor() {
-      return this.color === "light" ? "color: #ADADAD" : "color: #2D2D2D";
+      if (this.color === "light") {
+        return "color: #ADADAD";
+      }
+      if (this.color === "ultra-light") {
+        return "color: #ECECEC";
+      }
+      if (this.color === "dark") {
+        return "color: #2D2D2D";
+      }
+      return "color: #ADADAD";
     },
   },
 };
