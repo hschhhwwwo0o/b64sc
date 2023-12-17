@@ -5,9 +5,11 @@
         <div>
           <div>
             <div class="horizontal-paddings vertical-paddings">
-              <h-1-text>B64SC / Base64StringConverter</h-1-text>
+              <h-1-text :color="'light'"
+                >B64SC / Base64StringConverter</h-1-text
+              >
               <div class="top-2">
-                <paragraph-text>
+                <paragraph-text :color="'light'">
                   &nbsp; &nbsp; &nbsp; &nbsp; Converter base64 strings to high
                   quality images for further image download/copying. Base64 is a
                   group of similar binary-to-text encoding schemes that
