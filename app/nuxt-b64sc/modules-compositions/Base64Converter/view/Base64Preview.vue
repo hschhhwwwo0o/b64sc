@@ -2,7 +2,10 @@
   <!-- @requirement UF/FINAL-IMAGE/PREVIEW -->
   <div class="cont">
     <div v-if="dataUrl" class="download-button">
-      <form-text-button :color="'contrast'">Download</form-text-button>
+      <!-- @requirement UF/FINAL-IMAGE/DOWNLOAD -->
+      <form-text-button :color="'contrast'" @click="downloadImage"
+        >Download</form-text-button
+      >
     </div>
     <div :class="!dataUrl ? 'preview-text' : 'preview-image'">
       <div v-if="!dataUrl" class="text-cont">
@@ -16,7 +19,7 @@
         </text-paragraph-element>
       </div>
       <div v-if="dataUrl">
-        <img :src="dataUrl" alt="Image" />
+        <img id="base64-image" :src="dataUrl" alt="Image" />
       </div>
     </div>
   </div>
@@ -31,6 +34,14 @@ export default {
   computed: {
     ...mapWritableState(useBase64StringStore, ["base64String", "dataUrl"]),
     ...mapStores(useBase64StringStore),
+  },
+  methods: {
+    /**
+     * @requirement UF/FINAL-IMAGE/DOWNLOAD
+     */
+    async downloadImage(): Promise<void> {
+      await this.base64StringStore.downloadImage();
+    },
   },
 };
 </script>

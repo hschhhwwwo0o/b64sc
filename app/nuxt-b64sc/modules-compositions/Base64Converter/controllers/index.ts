@@ -1,4 +1,6 @@
+/** Modules */
 import { Base64ToDataURLGenerator } from "module/base64-to-dataurl-generator";
+import { HTMLImageController } from "module/html-image-controller";
 
 import { defineStore } from "pinia";
 
@@ -18,6 +20,14 @@ export const useBase64StringStore = defineStore("base64String", {
       this.base64String = newValue;
       const dataUrl = await base64ToDataURLGenerator.generateDataURL(newValue);
       this.dataUrl = dataUrl || "";
+    },
+
+    /**
+     * @requirement UF/FINAL-IMAGE/DOWNLOAD
+     */
+    async downloadImage(): Promise<void> {
+      const htmlImageController = new HTMLImageController("base64-image");
+      await htmlImageController.downloadImage();
     },
   },
 });
