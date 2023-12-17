@@ -76,7 +76,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 /** Components */
 import BorderSeparate from "./components/decore/BorderSeparate.vue";
 import H1Text from "./components/text/H1Text.vue";
@@ -87,13 +87,14 @@ import LinkText from "./components/text/LinkText.vue";
 import HorizontalSeparatedLayout from "./components/layouts/HorizontalSeparatedLayout.vue";
 
 /** Modules compositions */
-import { Base64ConverterModuleUI } from "./modules-compositions/Base64Converter/index";
+import { Base64ConverterModuleComposition } from "./modules-compositions/Base64Converter/index";
 
 export default {
   components: {
     HorizontalSeparatedLayout,
-    Base64TextareaInput: Base64ConverterModuleUI.view.Base64TextareaInput,
-    Base64Preview: Base64ConverterModuleUI.view.Base64Preview,
+    Base64TextareaInput:
+      Base64ConverterModuleComposition.view.Base64TextareaInput,
+    Base64Preview: Base64ConverterModuleComposition.view.Base64Preview,
     BorderSeparate,
     H1Text,
     ParagraphText,

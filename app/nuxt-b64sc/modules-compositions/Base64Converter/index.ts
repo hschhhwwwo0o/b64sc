@@ -5,7 +5,7 @@ import Base64TextareaInput from "./view/Base64TextareaInput.vue";
 /** Utils */
 import { _clear } from "./utils/_clear";
 
-const Base64ConverterModuleUI = {
+const Base64ConverterModuleComposition = {
   view: {
     Base64Preview,
     Base64TextareaInput,
@@ -16,4 +16,4 @@ const Base64ConverterModuleUI = {
   },
 };
 
-export { Base64ConverterModuleUI };
+export { Base64ConverterModuleComposition };
