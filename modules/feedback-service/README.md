@@ -1,8 +1,8 @@
 # Module @feedback-service
 
-The module is designed to send feedback
+The module is designed to send feedback.
 
-```js
+```ts
 const feedbackCreator = new FeedbackCreator();
 
 /**

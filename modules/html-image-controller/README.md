@@ -1,8 +1,8 @@
 # Module @html-image-controller
 
-The module is designed to download an image and copy the image to the clipboard
+The module is designed to download an image and copy the image to the clipboard.
 
-```js
+```ts
 const htmlImageController = new HTMLImageController("image-id");
 
 /**
