@@ -19,7 +19,7 @@ export async function _generateDataURL(
 
     /**
      * If the initially entered string is correct, we return the result.
-     * Otherwise the script continues working
+     * Else the script continues working
      */
     if (isCompletedBase64String) {
       return base64;
