@@ -21,7 +21,7 @@ export async function _generateDataURL(
     })();
 
     /** Create image from base64 string */
-    const image = await (async function _createImage() {
+    const image: HTMLImageElement = await (async function _createImage() {
       const image = new Image();
       image.setAttribute("crossorigin", "anonymous");
       image.src = dataUrlBase64;
