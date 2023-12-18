@@ -18,7 +18,7 @@
 # Nuxt.js application build
 {
   cd ./app/nuxt-b64sc
-  npm run build
+  npm run generate
 }
 
 {
