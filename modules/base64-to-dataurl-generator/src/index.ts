@@ -1,4 +1,4 @@
-import { _generateDataURL } from "./requirements/_generateDataURL";
+import { _generateDataURL } from "./requirements/generateDataURL/index";
 
 class Base64ToDataURLGenerator {
   /**
