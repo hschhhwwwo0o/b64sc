@@ -1,7 +1,7 @@
 import { _findImageHTMLElement } from "./utils/_findImageHTMLElement";
 
 import { _copyHTMLImage } from "./requirements/copyHTMLImage/index";
-import { _downloadHTMLImage } from "./requirements/_downloadHTMLImage";
+import { _downloadHTMLImage } from "./requirements/downloadHTMLImage/index";
 
 class HTMLImageController {
   private _imageElement: HTMLImageElement | null = null;
