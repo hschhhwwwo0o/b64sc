@@ -24,7 +24,7 @@ export default {
         return "color: #ADADAD";
       }
       if (this.color === "ultra-light") {
-        return "color: #ECECEC";
+        return "color: white";
       }
       if (this.color === "dark") {
         return "color: #2D2D2D";
