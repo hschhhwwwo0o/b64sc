@@ -102,3 +102,16 @@ export default {
   },
 };
 </script>
+
+<script setup lang="ts">
+useHead({
+  title: "B64SC",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Converter base64 strings to high quality images for further image download/copying.",
+    },
+  ],
+});
+</script>
