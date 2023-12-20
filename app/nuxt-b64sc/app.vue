@@ -113,5 +113,8 @@ useHead({
         "Converter base64 strings to high quality images for further image download/copying.",
     },
   ],
+  htmlAttrs: {
+    lang: "en",
+  },
 });
 </script>
