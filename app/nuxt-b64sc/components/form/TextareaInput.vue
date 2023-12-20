@@ -4,7 +4,6 @@
       {{ label }}
     </span>
     <textarea
-      resize="none"
       :class="`${styleClass}`"
       :name="`${name}`"
       :placeholder="`${placeholder}`"
@@ -57,13 +56,17 @@ export default {
   emits: ["change"],
   computed: {
     styleClass() {
+      let className: string = "standart";
       if (this.style === "standart") {
-        return "standart";
+        className = "standart";
       }
       if (this.style === "contrast") {
-        return "contrast";
+        className = "contrast";
       }
-      return "standart";
+      if (this.resize === "none") {
+        className = `${className} resize-none`;
+      }
+      return className;
     },
     labelStyleClass() {
       if (this.style === "standart") {
@@ -140,5 +143,9 @@ export default {
 
 .contrast-label {
   color: $brandColorLighter;
+}
+
+.resize-none {
+  resize: none;
 }
 </style>
