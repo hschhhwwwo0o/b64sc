@@ -91,7 +91,7 @@
 
 <script lang="ts">
 /** Modules compositions */
-import { Base64ConverterModuleComposition } from "./modules-compositions/Base64Converter/index";
+import { Base64ConverterModuleComposition } from "../../modules-compositions/Base64Converter";
 
 export default {
   components: {
