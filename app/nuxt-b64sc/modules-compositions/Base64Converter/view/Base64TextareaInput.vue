@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- @requirement UF/INPUT-BASE64 -->
-    <textarea-input
+    <form-textarea-input
       :label="'Base64 string'"
       :placeholder="'Enter base64 string...'"
       :style="'contrast'"
@@ -17,13 +17,7 @@
 import { mapStores, mapWritableState } from "pinia";
 import { useBase64StringStore } from "../controllers/index";
 
-/** Components */
-import TextareaInput from "../../../components/form/TextareaInput.vue";
-
 export default {
-  components: {
-    TextareaInput,
-  },
   computed: {
     ...mapWritableState(useBase64StringStore, ["base64String"]),
     ...mapStores(useBase64StringStore),

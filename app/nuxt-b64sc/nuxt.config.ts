@@ -5,6 +5,8 @@ export default defineNuxtConfig({
       "../../modules/base64-to-dataurl-generator/dist",
     "module/feedback-service": "../../modules/feedback-service/dist",
     "module/html-image-controller": "../../modules/html-image-controller/dist",
+    "modules-compositions/Base64Converter":
+      "./modules-compositions/Base64Converter/index.ts",
   },
   devtools: { enabled: false },
   css: ["~/assets/styles/reset.css", "~/assets/styles/global.scss"],
