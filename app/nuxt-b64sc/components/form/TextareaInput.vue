@@ -86,13 +86,13 @@ export default {
   padding-bottom: 10px;
   background-color: transparent;
   border-color: $brandColor;
-  color: $brandColor;
+  color: $brandColorLighter;
   box-sizing: border-box;
   min-height: 90px;
   font-family: "Playfair Display";
 
   &::placeholder {
-    color: $brandColor;
+    color: $brandColorLighter;
     opacity: 0.5;
     font-family: "Playfair Display";
   }
@@ -130,6 +130,6 @@ export default {
 }
 
 .contrast-label {
-  color: $brandColor;
+  color: $brandColorLighter;
 }
 </style>
