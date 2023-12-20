@@ -4,12 +4,12 @@
     <div :class="!dataUrl ? 'preview-text' : 'preview-image'">
       <div v-if="!dataUrl" class="text-cont">
         <text-paragraph-element :color="'ultra-light'">
-          &nbsp; &nbsp; &nbsp; &nbsp; This window will display the image after
-          inserting the base64 string into the corresponding field.
+          This window will display the image after inserting the base64 string
+          into the corresponding field.
         </text-paragraph-element>
         <br />
         <text-paragraph-element :color="'ultra-light'">
-          &nbsp; &nbsp; &nbsp; &nbsp; Now the image is not loaded.
+          Now the image is not loaded.
         </text-paragraph-element>
       </div>
       <div v-if="dataUrl">

@@ -10,15 +10,14 @@
               >
               <div class="top-2">
                 <text-paragraph-element :color="'light'">
-                  &nbsp; &nbsp; &nbsp; &nbsp; Converter base64 strings to high
-                  quality images for further image download/copying. Base64 is a
-                  group of similar binary-to-text encoding schemes that
-                  represent binary data in an ASCII string format by translating
-                  it into a radix-64 representation. Use the simple and
-                  intuitive user interface of our service to convert base64
-                  string. Just enter the base64 string in the appropriate field
-                  and download your image in the highest quality without
-                  watermarks.
+                  Converter base64 strings to high quality images for further
+                  image download/copying. Base64 is a group of similar
+                  binary-to-text encoding schemes that represent binary data in
+                  an ASCII string format by translating it into a radix-64
+                  representation. Use the simple and intuitive user interface of
+                  our service to convert base64 string. Just enter the base64
+                  string in the appropriate field and download your image in the
+                  highest quality without watermarks.
                 </text-paragraph-element>
               </div>
             </div>
@@ -63,9 +62,9 @@
             <text-header2-element :color="'dark'">Result</text-header2-element>
             <div class="top-2">
               <text-paragraph-element :color="'dark'">
-                &nbsp; &nbsp; &nbsp; &nbsp; The result of the service will
-                appear in the highlighted window below after specifying the
-                base64 string in the corresponding field
+                The result of the service will appear in the highlighted window
+                below after specifying the base64 string in the corresponding
+                field
               </text-paragraph-element>
             </div>
           </div>
