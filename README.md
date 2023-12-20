@@ -1,3 +1,5 @@
+![MockUp](./md/app-preview.png)
+
 Converter base64 strings to high quality images for further image download/copying.
 
 <a href="https://github.com/hschhhwwwo0o/b64sc/discussions">Recommendations, questions, opinions, feedback.</a>
