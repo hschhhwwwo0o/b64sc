@@ -1,4 +1,4 @@
-![MockUp](./md/app-preview.png)
+![MockUp](./md/app-preview-1.png)
 
 Converter base64 strings to high quality images for further image download/copying.
 
