@@ -2,6 +2,7 @@
   <div>
     <!-- @requirement UF/INPUT-BASE64 -->
     <form-textarea-input
+      :resize="'none'"
       :label="'Base64 string'"
       :placeholder="'Enter base64 string...'"
       :style="'contrast'"

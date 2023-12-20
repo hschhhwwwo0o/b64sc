@@ -4,6 +4,7 @@
       {{ label }}
     </span>
     <textarea
+      resize="none"
       :class="`${styleClass}`"
       :name="`${name}`"
       :placeholder="`${placeholder}`"
@@ -23,6 +24,14 @@ export default {
         return ["standart", "contrast"].includes(value);
       },
       required: true,
+    },
+    resize: {
+      type: String,
+      default: "auto",
+      required: false,
+      validator(value: string): boolean {
+        return ["auto", "none"].includes(value);
+      },
     },
     placeholder: {
       type: String,
