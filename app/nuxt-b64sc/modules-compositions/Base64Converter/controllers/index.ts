@@ -37,5 +37,15 @@ export const useBase64StringStore = defineStore("base64String", {
       const htmlImageController = new HTMLImageController("base64-image");
       await htmlImageController.copyImage();
     },
+
+    /** @requirement UF/CLEAR-INPUT-BASE64 */
+    clearBase64String() {
+      this.base64String = "";
+    },
+
+    /** @requirement UF/COPY-INPUT-BASE64 */
+    async copyBase64String() {
+      await navigator.clipboard.writeText(this.base64String);
+    },
   },
 });

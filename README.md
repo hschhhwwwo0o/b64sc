@@ -164,6 +164,7 @@ The term dictionary is intended to ensure that the same terms are used throughou
 | Open Graph support.                | QA/SEO/OPEN-GRAPH        | Necessary to improve search engine rankings.                                     |  ❌  |
 | Description of standard meta tags. | QA/SEO/META              | Necessary to improve search engine rankings.                                     |  ✅  |
 | Twitter meta tags.                 | QA/SEO/TWITTER-META      | Necessary to improve search engine rankings.                                     |  ❌  |
+| Displaying notifications           | QA/NOTIFICATION          | Displaying notifications after actions                                           |  ❌  |
 
 ### Functional requirements.
 
@@ -175,7 +176,8 @@ The term dictionary is intended to ensure that the same terms are used throughou
 | :------------------------------------ | :---------------------- | :--------------------------- | :--: |
 | Sending feedback.                     | UF/FEEDBACK/CREATE      | @feedback-service            |  ✅  |
 | Generating daturl from base64 string. | UF/FINAL-IMAGE/DATA-URL | @base64-to-dataurl-generator |  ✅  |
-| Clear base64 string.                  | UF/CLEAR-INPUT-BASE64   | @app                         |  ❌  |
+| Clear base64 string.                  | UF/CLEAR-INPUT-BASE64   | @app                         |  ✅  |
+| Copy base64 string.                   | UF/COPY-INPUT-BASE64    | @app                         |  ✅  |
 | Input base64 string.                  | UF/INPUT-BASE64         | @app                         |  ✅  |
 | Displaying an image.                  | UF/FINAL-IMAGE/PREVIEW  | @app                         |  ✅  |
 | Downloading a image.                  | UF/FINAL-IMAGE/DOWNLOAD | @html-image-controller       |  ✅  |

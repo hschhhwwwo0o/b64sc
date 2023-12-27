@@ -17,9 +17,7 @@ export default {
       },
     },
   },
-  emits: {
-    click: null,
-  },
+  emits: ["click"],
   computed: {
     textColorClass() {
       if (this.color === "white") {
