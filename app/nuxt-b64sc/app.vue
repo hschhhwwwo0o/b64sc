@@ -71,14 +71,7 @@
           <decore-border-separate :style="'light'" />
         </div>
         <div
-          style="
-            height: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            flex-grow: 1;
-            flex-direction: column;
-          "
-          class="horizontal-paddings vertical-paddings"
+          class="final-image-container horizontal-paddings vertical-paddings"
         >
           <final-image-controls />
           <base-64-preview />
@@ -118,3 +111,13 @@ useHead({
   },
 });
 </script>
+
+<style>
+.final-image-container {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-direction: column;
+}
+</style>
