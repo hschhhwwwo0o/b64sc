@@ -12,9 +12,18 @@
     />
     <div class="actions">
       <!-- @requirement UF/COPY-INPUT-BASE64 -->
-      <form-text-button @click="copyBase64String">Copy string</form-text-button>
+      <form-text-button v-if="base64String" @click="copyBase64String"
+        >Copy string</form-text-button
+      >
+      <form-text-button v-if="!base64String" @click="pasteTestBase64String"
+        >Paste test string</form-text-button
+      >
       <!-- @requirement UF/CLEAR-INPUT-BASE64 -->
-      <form-text-button :color="'danger'" @click="() => clearBase64String()">
+      <form-text-button
+        v-if="base64String"
+        :color="'danger'"
+        @click="() => clearBase64String()"
+      >
         Clear string
       </form-text-button>
     </div>
@@ -25,6 +34,8 @@
 /** Connect store */
 import { mapStores, mapWritableState } from "pinia";
 import { useBase64StringStore } from "../controllers/index";
+
+import { testString } from "../data/testString";
 
 export default {
   computed: {
@@ -49,6 +60,9 @@ export default {
      */
     copyBase64String() {
       this.base64StringStore.copyBase64String();
+    },
+    pasteTestBase64String() {
+      this.base64StringStore.changeBase64String(testString);
     },
   },
 };
